@@ -1,0 +1,245 @@
+.contener {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000000;
+    margin: 100px auto;
+    position: relative;
+    background: rgb(172, 255, 242);
+}
+.telo {
+    border: 1px solid #000000;
+    width: 100px;
+    height: 200px;
+    background: rgb(56, 221, 67);
+    border-radius: 50px / 100px;
+    left: 200px;
+    bottom: 100px;
+    position: absolute;
+}
+.head {
+    z-index: 2;
+    border: 1px solid #000000;
+    width: 100px;
+    height: 100px;
+    background: rgb(247, 229, 206);
+    border-radius: 50%;
+    right: 200px;
+    bottom: 270px;
+    position: absolute;
+}
+.eye1 {
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    right: 230px;
+    bottom: 320px;
+    position: absolute;
+}
+.eye2 {
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    left: 230px;
+    bottom: 320px;
+    position: absolute;
+}
+.nose {
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+    left: 235px;
+    bottom: 290px;
+    position: absolute;
+}
+.hair1 {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 0, 212);
+    border-radius: 50%;
+    left: 190px;
+    bottom: 330px;
+    position: absolute;
+}
+.hair2 {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 0, 212);
+    border-radius: 50%;
+    right: 190px;
+    bottom: 330px;
+    position: absolute;
+}
+.hair3 {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 0, 212);
+    border-radius: 50%;
+    right: 190px;
+    bottom: 300px;
+    position: absolute;
+}
+.hair4 {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 0, 212);
+    border-radius: 50%;
+    left: 190px;
+    bottom: 300px;
+    position: absolute;
+}
+.hair5 {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 0, 212);
+    border-radius: 50%;
+    right: 165px;
+    bottom: 315px;
+    position: absolute;
+}
+.hair6 {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 0, 212);
+    border-radius: 50%;
+    left: 165px;
+    bottom: 315px;
+    position: absolute;
+}
+.hat{
+    z-index: 2;
+    width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid rgb(239, 14, 7);
+    left: 200px;
+    bottom: 360px;
+    position: absolute;
+}
+.sleeve1 {
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 90px solid rgb(246, 102, 25);
+    border-bottom: 40px solid transparent;
+    right: 140px;
+    bottom: 190px;
+    position: absolute;
+}
+.sleeve2 {
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-left: 90px solid rgb(246, 102, 25);
+    border-bottom: 40px solid transparent;
+    left: 140px;
+    bottom: 190px;
+    position: absolute;
+}
+.pants1 {
+    z-index: 2;
+    width: 0;
+      height: 0;
+      border-bottom: 90px solid rgb(246, 102, 25);
+      border-right: 90px solid transparent;
+    right: 150px;
+    bottom: 50px;
+    position: absolute;
+}
+.pants2 {
+    z-index: 2;
+    width: 0;
+      height: 0;
+      border-bottom: 90px solid rgb(246, 102, 25);
+      border-left: 90px solid transparent;
+    left: 150px;
+    bottom: 50px;
+    position: absolute;
+}
+.hend1 {
+    z-index: 2;
+    border: 1px solid #000000;
+    width: 40px;
+    height: 40px;
+    background: rgb(247, 229, 206);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    right: 100px;
+    bottom: 210px;
+    position: absolute;
+}
+.hend2 {
+    z-index: 2;
+    border: 1px solid #000000;
+    width: 40px;
+    height: 40px;
+    background: rgb(247, 229, 206);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    left: 100px;
+    bottom: 210px;
+    position: absolute;
+}
+.star {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgb(246, 102, 25);
+    position: absolute;
+    right: 200px;
+    bottom: 250px;
+  }
+  .star:after {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid rgb(246, 102, 25);
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: -50px;
+    right: 200px;
+    bottom: 250px;
+  }
+  .foot1 {
+    z-index: 2;
+    border: 2px solid #000000;
+    width: 100px;
+    height: 30px;
+    background:  rgb(239, 14, 7);
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    right: 130px;
+    bottom: 30px;
+    position: absolute;
+}
+.foot2 {
+    z-index: 2;
+    border: 2px solid #000000;
+    width: 100px;
+    height: 30px;
+    background:  rgb(239, 14, 7);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    left: 130px;
+    bottom: 30px;
+    position: absolute;
+}
