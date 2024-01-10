@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="6.css">
+</head>
+    <body>        
+        <form  action="index.html" class="form" id="form" method="post" onsubmit="test(document.getElementById('form'))">
+            <br /><br /><span>Форма для добавления товара в каталог</span><br />
+            <div>
+                <label for="name">Наименование товара*</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label for="opis">Описание</label>
+                <textarea style="width:100%; height:50px;" type="text" id="opis" name="opis"></textarea>
+            </div>
+            <div>
+                <label for="color">Цвет</label>
+                <input type="color" name="color" id="color">
+            </div>
+            <div>
+                <label for="price">Цена*</label>
+                <input type="text" name="price" id="price">
+            </div>
+            <div>
+                <label for="quantity">Количество*</label>
+                <input type="number" name="quantity" id="quantity">
+            </div>
+            <div>
+                <label for="factory">Производитель*</label>
+                <select name="factory" id="factory">
+                    <option value="">Выберите производителя</option>
+                    <option value="O'STIN">O'STIN</option>
+                    <option value="New Yorker">New Yorker</option>
+                    <option value="FunDay">FunDay</option>
+                    <option value="Zara">Zara</option>
+                    <option value="Zolla">Zolla</option>
+                </select>
+                <div class="select-arrow"></div>
+            </div>
+            <div>
+                <label for="country">Категория*</label>
+                <select name="country" id="country">
+                    <option value="">Выберите категорию товара</option>
+                    <option value="Блузки">Блузки</option>
+                    <option value="Брюки">Брюки</option>
+                    <option value="Комбинезоны">Комбинезоны</option>
+                    <option value="Пиджаки">Пиджаки</option>
+                    <option value="Платья">Платья</option>
+                    <option value="Джинсы">Джинсы</option>
+                </select>
+                <div class="select-arrow"></div>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="actions" value="Убрать из акций">Убрать из акций
+                    <div class="radio-control female"></div>
+                </label>
+            </div>
+            <div>
+                <label for="pics">Загрузить изображения*</label>
+                <input type="file" name="pics" id="pics">
+            </div>
+            <span id="error" style="color: red"></span>
+            <button type="submit">Добавить товар</button>
+        </form>    
+
+        <script>
+            function Obnov() {
+               location.reload();
+               }
+       
+       function test(form){
+               event.preventDefault();
+       
+       var color = form.color.value;
+       var name = form.name.value;
+       var opis = form.opis.value;
+       var price = form.price.value;
+       var quantity = form.quantity.value;
+       var factory = form.factory.value;
+       var country = form.country.value;
+       var pics = form.pics.value;
+       const n = /^[0-9\-]+$/;
+       const p = /^[a-zA-Zа-яА-Я0-9\-]+$/;
+       
+       var over = false;
+       
+       
+       if (name == "" || name == " " || p.test(name) == false)
+       over="Введите полное наименование товара";
+       else if(price == "" || price ==" ")
+       over="Введите цену товара";
+       else if(quantity == "")
+       over="Введите количество товара";
+       else if(factory == "")
+       over="Введите производителя";
+       else if(country == "")
+       over="Введите категорию товара";
+       else if(pics == "")
+       over="Прикрепите изображение";
+       
+       if(over){
+           document.getElementById('error').innerHTML = over;
+       } else{
+           alert("Наименование товара: " + name + "\nОписание: " + opis + "\nЦвет: " + color + "\nЦена: " + price + "\nКоличество: " + quantity + "\nПроизводитель: " + factory + "\nКатегория: " + country + "\nИзображения: " + pics);
+           Obnov(form) 
+           }
+       
+       }
+       
+          
+       </script>    
+    </body>
+</html>

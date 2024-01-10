@@ -1,0 +1,116 @@
+*{box-sizing:border-box}
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i&subset=cyrillic';
+
+body {
+    background: rgb(144, 212, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+form {
+    background: white;
+    float: left;
+    width: calc(100% - 240px);
+    padding: 30px;
+    border-radius: 0 20px 20px 0;
+    color: #3154df;
+}
+
+form div {
+  margin-bottom: 15px;
+  position: relative;
+}
+label, span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px 15px;
+    border-width: 0;
+    background: rgb(241, 253, 255);
+    outline: none;
+    margin: 0;
+}
+input[type="text"]:focus, input[type="number"]:focus {
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio label {
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+  width: 50%;
+  float: left;
+  line-height: 40px;
+}
+.radio input {
+  position: absolute;
+  opacity: 0;
+}
+.radio-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background: rgb(241, 253, 255);
+    border-radius: 50%;
+    text-align: center;
+}
+.female:before {
+    content: "\2714";
+    font-family: FontAwesome;
+    font-weight: bold;
+}
+.radio label:hover input ~ .radio-control,
+.radiol input:focus ~ .radio-control {
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio input:checked ~ .radio-control {
+  color: red;
+}
+select {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    background: rgb(241, 253, 255);
+    color: #0e1da1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+.select-arrow {
+    position: absolute;
+    top: 38px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+button {
+    padding: 10px 0;
+    border-width: 0;
+    display: block;
+    width: 120px;
+    margin: 25px auto 0;
+    background: rgb(144, 212, 224);
+    color: rgb(43, 48, 195);
+    font-size: 14px;
+    outline: none;
+    text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  body {display: block}
+  .profile, form {float: none; width: 100%} 
+  form {border-radius: 0 0 20px 20px}
+}
